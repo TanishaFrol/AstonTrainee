@@ -5,7 +5,7 @@ package hw1;
  * @version 1.0
  * @autor Tanisha
  */
-public class MyArrayListImp<T extends Comparable<? super T>> implements MyArrayList<T> {
+public class MyArrayListImp<T> implements MyArrayList<T> {
     /**
      * Internal array
      */
