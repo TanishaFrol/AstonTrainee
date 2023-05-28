@@ -58,4 +58,15 @@ class MyArrayListImpTest {
         listImp.sort();
         Assertions.assertEquals("[ a, a, b, b, c, d, e ]", listImp.toString());
     }
+    @Test
+    void throwsException() {
+        MyArrayListImp<Object> tMyArrayListImp = new MyArrayListImp<>();
+        Assertions.assertThrows(IndexOutOfBoundsException.class, () -> tMyArrayListImp.add(1, new Object()));
+    }
+    @Test
+    void addIndex0() {
+        listImp.clear();
+        listImp.add(0, "a");
+        Assertions.assertEquals("[ a ]", listImp.toString());
+    }
 }

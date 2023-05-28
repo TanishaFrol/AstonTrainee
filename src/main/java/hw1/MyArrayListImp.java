@@ -101,6 +101,7 @@ public class MyArrayListImp<T> implements MyArrayList<T> {
      * @throw IndexOutOfBoundsException
      */
     private void checkIndex(int index) {
+        if (index == 0) return;
         if (index >= size || index < 0)
             throw new IndexOutOfBoundsException(index);
     }
